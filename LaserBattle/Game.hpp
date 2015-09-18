@@ -1,12 +1,12 @@
 #ifndef GAME_GUARD
 #define GAME_GUARD
 
-#include <SFML/Graphics.hpp>
 class Game {
 
 private:
 	sf::RenderWindow mWindow;
-
+	Field gameField; // not liking field, but works temporarily. Read gameworld
+	sf::View mView; // camera
 
 public:
 	Game();

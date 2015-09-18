@@ -1,3 +1,5 @@
+#include <SFML/Graphics.hpp>
+#include "Field.hpp"
 
 #include "Game.hpp"
 
@@ -13,7 +15,7 @@ int main() {
 /*
 This constructor sets the size of the renderwindow, the init file that generates the world (background only currently), and sets the cameras center and size
 */
-Game::Game() : mWindow(sf::VideoMode(640, 480), "Strategic Sports Game"), gameField("C:/Users/Trond/Dropbox/SFML GAMES/Projects/SUMMER PROJECT 2015/Strategic Sports Game/Strategic Sports Game/FieldInit.txt") {
+Game::Game() : mWindow(sf::VideoMode(640, 480), "Strategic Sports Game"), gameField("FieldInit.txt") {
 
 	sf::Vector2f dimensions = gameField.getFieldSize();
 	mView.setCenter(dimensions.x / 2, dimensions.y / 2);
@@ -73,3 +75,4 @@ void Game::update(sf::Time elapsedTime) {
 
 	// remember, real time input, update or processInput
 }
+
