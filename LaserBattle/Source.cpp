@@ -25,5 +25,6 @@ int main()
 		window.display();
 	}
 
+	cout << "window closed!" << endl;
 	return 0;
 }
