@@ -1,10 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include "Field.hpp"
-
 #include "Game.hpp"
 
 #define TimePerFrame sf::seconds (1.f/ 60.f)
-#define cameraMovement sf::Vector2f (100.f,100.f)
 
 
 int main() {
@@ -51,6 +49,7 @@ void Game::render() {
 	gameField.drawField(mWindow);
 	mWindow.display();
 
+
 }
 /*
 Currently only handles window closing
@@ -71,7 +70,7 @@ void Game::processInput()
 
 void Game::update(sf::Time elapsedTime) {
 
-	gameField.updateField(elapsedTime);
+	// gameField.updateField(elapsedTime);
 
 	// remember, real time input, update or processInput
 }

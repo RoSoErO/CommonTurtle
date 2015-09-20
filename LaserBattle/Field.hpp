@@ -19,8 +19,6 @@ private:
 	std::map <std::string, ResourceHolder <sf::Texture>> textures;
 	SceneNode sceneRoot; // The root of the sceneNode system, the first draw called is called on this root. 
 	sf::Vector2i fieldDimensions; // How many tiles there is in x,y direction
-	sf::IntRect playingField;
-	FieldNode * fieldEntities;
 
 public:
 
@@ -28,7 +26,6 @@ public:
 	void drawField(sf::RenderWindow & gWindow);
 	Field(const std::string & worldInit);
 	void backgroundInit(FileReader & reader);
-	void playerInit(FileReader & reader);
 	sf::Vector2f getFieldSize();
 	FieldNode * getFieldEntities();
 	void updateField(sf::Time timestep);
